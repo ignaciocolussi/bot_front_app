@@ -13,6 +13,7 @@
              <div class="card-header">
                  Mensajes
                  <span [ngClass]="this.webSocket.status ? 'dot onlinedot' : 'dot offlinedot' "></span>
+                 <button type="button" class="btn btn-sm btn-primary ms-2" [ngClass]="this.webSocket.status ? 'disabled' : '' " (click)="ngOnInit()">Reconectar</button>
              </div>
 
              <div class="chat-app">
