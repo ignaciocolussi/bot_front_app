@@ -26,6 +26,7 @@ export class WebSocketService{
       console.debug(chatMsg);
      }
 
+  
     this.websocket.onclose = (e) => {
       this.status = false;
     }

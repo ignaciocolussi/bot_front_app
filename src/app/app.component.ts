@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   ){ }
 
   sendmessage(wsMessageForm: NgForm) {
-    const chatMsg = new WebsocketChat(wsMessageForm.value.user, wsMessageForm.value.message, []);
+    const chatMsg = new WebsocketChat("user", wsMessageForm.value.message, []);
     this.webSocket.sendWebSocketMessage(chatMsg);
     wsMessageForm.controls['message'].reset();
 }

@@ -13,8 +13,17 @@
 }
 .chat-app{
   height: 40rem;
-  overflow: scroll;
+  overflow-y: scroll;
+  transform: rotate(180deg);
+  direction: rtl;
+  text-align: left;
 }
+.chat-app > .chat{
+  transform: rotate(180deg);
+  direction: ltr;
+}
+
+
 
 .dot{
   height: 10px;
