@@ -13,11 +13,13 @@ export class WebSocketService{
 
   openWebsocketConnection() {
     try{
-      this.websocket = new WebSocket('wss://botpruebatecnica.e2ecfsbwc5h7d2fh.eastus.azurecontainer.io:3000');
+      console.log('tratando con wss')
+      this.websocket = new WebSocket('wss://20.241.153.139:443');
     }catch(err){
       console.log(err)
       try{
-        this.websocket = new WebSocket('wss://botpruebatecnica.e2ecfsbwc5h7d2fh.eastus.azurecontainer.io:3000');
+        console.log('tratando con ws')
+        this.websocket = new WebSocket('ws://20.241.153.139:443');
       }catch(err){
         console.log(err)
       }
