@@ -12,7 +12,18 @@ export class WebSocketService{
   constructor() {}
 
   openWebsocketConnection() {
-    this.websocket = new WebSocket('ws://botpruebatecnica.e2ecfsbwc5h7d2fh.eastus.azurecontainer.io:3000');
+    try{
+      this.websocket = new WebSocket('wss://botpruebatecnica.e2ecfsbwc5h7d2fh.eastus.azurecontainer.io:3000');
+    }catch(err){
+      console.log(err)
+      try{
+        this.websocket = new WebSocket('wss://botpruebatecnica.e2ecfsbwc5h7d2fh.eastus.azurecontainer.io:3000');
+      }catch(err){
+        console.log(err)
+      }
+
+    }
+
 
     this.websocket.onopen = (e) => {
       this.status = true;
