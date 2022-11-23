@@ -14,16 +14,9 @@ export class WebSocketService{
   openWebsocketConnection() {
     try{
       console.log('tratando con wss')
-      this.websocket = new WebSocket('wss://20.241.153.139:443');
+      this.websocket = new WebSocket('ws://botpruebatecnica.eastus.cloudapp.azure.com');
     }catch(err){
-      console.log(err)
-      try{
-        console.log('tratando con ws')
-        this.websocket = new WebSocket('ws://20.241.153.139:443');
-      }catch(err){
-        console.log(err)
-      }
-
+      console.error(err)
     }
 
 
