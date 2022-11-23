@@ -12,7 +12,7 @@ export class WebSocketService{
   constructor() {}
 
   openWebsocketConnection() {
-    this.websocket = new WebSocket('ws://localhost:3000');
+    this.websocket = new WebSocket('ws://botpruebatecnica.e2ecfsbwc5h7d2fh.eastus.azurecontainer.io:3000');
 
     this.websocket.onopen = (e) => {
       this.status = true;
@@ -26,7 +26,7 @@ export class WebSocketService{
       console.debug(chatMsg);
      }
 
-  
+
     this.websocket.onclose = (e) => {
       this.status = false;
     }
